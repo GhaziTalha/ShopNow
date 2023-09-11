@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ShopNow.Model
 {
-    public class Product : IEntity<int>
+    public class Product:IEntity<int>
     {
-        int IEntity<int>.Id { get ; set; }
+       public int Id { get; set; }
+        public string Name { get; set; }
+        public DateTime Expiry { get; set; }
     }
 }
