@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ShopNow.Model
 {
-    public class ICategory : IEntity<int>
+    public class Category:IEntity<int>
     {
-        int IEntity<int>.Id { get ; set; }
+        public int Id { get; set; }
     }
 }

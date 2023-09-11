@@ -1,4 +1,9 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Integration.Mvc;
+using ShopNow.Repository.Common.Repository.Impl;
+using ShopNow.Repository.Common.Repository.Interface;
+using ShopNow.WebUI.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +17,8 @@ namespace ShopNow.WebUI
     {
         protected void Application_Start()
         {
+
+            AutoFacConfig.Register();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
